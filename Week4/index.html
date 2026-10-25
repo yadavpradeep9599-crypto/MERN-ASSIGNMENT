@@ -1,31 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Tech Club - Register</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech club - Register</title>
 </head>
 <body>
+    <h1>Tech club - Register </h1>
 
-  <h1>Tech Club Registration</h1>
+    <form action="#" method ="post">
 
-  <form action="#" method="post">
+        <p>
+            <label for ="name">Name:</label>
+            <input type="text" id="name" name="name">
+        </p>
 
-    <p>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name">
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="eamil">
+        </p>
+
+        <p>
+            <label for="password">Passward:</label>
+            <input type="password" id="password" name="password">
+        </p>
+
+        <p>
+            <label for="dob"> Date of birth</label>
+            <input type="date" id="dob" name="dob">
+        </p>
+
+        <p>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phonr">
+        </p>
+
+        <p>
+      Year:
+      <input type="radio" id="year1" name="year" value="1st">
+      <label for="year1">1st Year</label>
+
+      <input type="radio" id="year2" name="year" value="2nd">
+      <label for="year2">2nd Year</label>
+
+      <input type="radio" id="year3" name="year" value="3rd">
+      <label for="year3">3rd Year</label>
     </p>
 
     <p>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email">
+      Interests:
+      <input type="checkbox" id="web" name="interest" value="web">
+      <label for="web">Web Development</label>
+
+      <input type="checkbox" id="java" name="interest" value="java">
+      <label for="java">Java</label>
+
+      <input type="checkbox" id="ai" name="interest" value="ai">
+      <label for="ai">AI</label>
     </p>
 
     <p>
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password">
+      <label for="event">Select Event:</label>
+      <select id="event" name="event">
+        <option value="">-- Choose --</option>
+        <option value="hackathon">Hackathon</option>
+        <option value="workshop">Coding Workshop</option>
+        <option value="quiz">Tech Quiz</option>
+      </select>
     </p>
 
-  </form>
+    <p>
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="4" cols="40"></textarea>
+    </p>
 
+    <p>
+      <input type="submit" value="Register">
+    </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </form>
+    
 </body>
 </html>
