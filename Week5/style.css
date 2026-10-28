@@ -1,0 +1,139 @@
+/* 5.4: all colours, fonts and spacing live here */
+:root {
+  /* Colours */
+  --primary: #0a58ca;
+  --primary-dark: #084298;
+  --text: #222222;
+  --text-light: #444444;
+  --background: #f4f6fb;
+  --white: #ffffff;
+  --border: #d0d7e2;
+
+  /* Fonts */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Roboto', Arial, sans-serif;
+
+  /* Spacing */
+  --space-small: 8px;
+  --space-medium: 16px;
+  --space-large: 32px;
+  --radius: 8px;
+}
+
+/* Universal selector */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--background);
+  padding: var(--space-medium);
+}
+
+/* Element selector */
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  color: var(--primary);
+  margin-bottom: var(--space-medium);
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text-light);
+  margin-bottom: var(--space-medium);
+}
+
+/* ID selector */
+#hero {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: var(--space-large);
+  border-radius: var(--radius);
+  margin-bottom: var(--space-large);
+}
+
+#hero h1,
+#hero p {
+  color: var(--white);
+}
+
+/* Class selector */
+.card {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-medium);
+  margin-bottom: var(--space-medium);
+}
+
+/* Table from your Week 4 page */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--white);
+}
+
+th,
+td {
+  border: 1px solid var(--border);
+  padding: var(--space-small);
+  text-align: left;
+}
+
+th {
+  font-family: var(--font-heading);
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+/* Form from your Week 4 page */
+label {
+  display: block;
+  font-weight: 500;
+  margin-top: var(--space-medium);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 16px;
+  padding: var(--space-small);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+button,
+input[type="submit"] {
+  width: auto;
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: var(--space-small) var(--space-large);
+  margin-top: var(--space-medium);
+  cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: var(--primary-dark);
+}
