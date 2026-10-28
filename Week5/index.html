@@ -6,109 +6,37 @@
   <meta name="description" content="Explore upcoming Tech Club events, workshops, and coding sessions.">
   <title>Tech Club - Upcoming Events</title>
   <style>
-    :root {
-      color-scheme: light;
-      font-family: Arial, sans-serif;
-      color: #1f2937;
-      background: #f3f6fb;
-    }
-
     * {
       box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
 
-    body {
-      margin: 0;
-      line-height: 1.6;
+    h1 {
+      margin: 0 0 0.75rem;
+      font-size: 2rem;
     }
 
-    header,
-    footer {
+    .card {
+      width: min(100% - 2rem, 960px);
+      margin: 2rem auto;
+      padding: 1.5rem;
+      border-radius: 12px;
+      color: #1f2937;
+      background: #fff;
+      box-shadow: 0 4px 16px rgb(31 41 55 / 10%);
+      overflow-x: auto;
+    }
+
+    #hero {
       padding: 1.25rem;
       color: #fff;
       background: #1e3a8a;
       text-align: center;
     }
-
-    header h1 {
-      margin: 0 0 0.75rem;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-    }
-
-    nav a:hover,
-    nav a:focus-visible {
-      text-decoration: underline;
-    }
-
-    main {
-      width: min(100% - 2rem, 960px);
-      margin: 2rem auto;
-      padding: 1.5rem;
-      border-radius: 12px;
-      background: #fff;
-      box-shadow: 0 4px 16px rgb(31 41 55 / 10%);
-    }
-
-    h2 {
-      margin-top: 0;
-      color: #1e3a8a;
-    }
-
-    .table-wrapper {
-      overflow-x: auto;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: left;
-    }
-
-    th,
-    td {
-      padding: 0.75rem;
-      border: 1px solid #d1d5db;
-    }
-
-    thead {
-      color: #fff;
-      background: #1e3a8a;
-    }
-
-    tbody tr:nth-child(even) {
-      background: #eff6ff;
-    }
-
-    tfoot {
-      font-weight: bold;
-      background: #e5e7eb;
-    }
-
-    @media (max-width: 600px) {
-      main {
-        padding: 1rem;
-      }
-
-      th,
-      td {
-        padding: 0.5rem;
-      }
-    }
   </style>
 </head>
 <body>
-  <header>
+  <header id="hero">
     <h1>Tech Club</h1>
     <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
@@ -118,7 +46,7 @@
   </header>
 
   <main>
-    <section id="events" aria-labelledby="events-heading">
+    <section id="events" class="card" aria-labelledby="events-heading">
       <h2 id="events-heading">Upcoming Events</h2>
       <div class="table-wrapper">
         <table>
