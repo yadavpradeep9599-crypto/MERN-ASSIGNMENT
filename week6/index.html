@@ -1,50 +1,106 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile Card</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-  <div class="top-bar">My Profile Page</div>
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  margin: 0;
+  min-height: 150vh;
+}
 
-  <div class="cards">
+/* ---------- Layout ---------- */
+.cards {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  padding: 40px;
+}
 
-    <!-- Version 1: Blue -->
-    <div class="profile-card card-blue">
-      <h2 class="name">Pradeep Kumar Yadav</h2>
-      <p class="role">B.Tech CSE Student</p>
-      <div class="bio-box">
-        <p>
-          Hi, I am Pradeep, a first-year B.Tech CSE student. I am learning
-          HTML, CSS and Java. I enjoy volleyball, kabaddi, bike riding and
-          visiting new places. I like building small web pages and I want to
-          become a good software developer. This extra text is here so the
-          box becomes long enough to show the scrollbar.
-        </p>
-      </div>
-    </div>
+/* ---------- Top bar ---------- */
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #1976d2;
+  color: #fff;
+  padding: 14px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
 
-    <!-- Version 2: Green -->
-    <div class="profile-card card-green">
-      <h2 class="name">Pradeep Kumar Yadav</h2>
-      <p class="role">B.Tech CSE Student</p>
-      <div class="bio-box">
-        <p>
-          Hi, I am Pradeep, a first-year B.Tech CSE student. I am learning
-          HTML, CSS and Java. I enjoy volleyball, kabaddi, bike riding and
-          visiting new places. I like building small web pages and I want to
-          become a good software developer. This extra text is here so the
-          box becomes long enough to show the scrollbar.
-        </p>
-      </div>
-    </div>
+/* ---------- Profile card ---------- */
+.profile-card {
+  width: 260px;
+  padding: 20px;
+  text-align: center;
+  border: 3px solid;
+  border-radius: 16px;
+}
 
-  </div>
+.name {
+  margin: 12px 0 4px;
+}
 
-  <button class="add-btn">+</button>
+.role {
+  margin: 0;
+}
 
-</body>
-</html>
+/* ---------- Bio box ---------- */
+.bio-box {
+  height: 100px;
+  overflow: auto;
+  margin-top: 14px;
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+  border: 2px solid;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.bio-box p {
+  margin: 0;
+}
+
+/* ---------- Colour versions ---------- */
+.card-blue {
+  background: #e3f2fd;
+  border-color: #1976d2;
+  color: #0d47a1;
+}
+
+.card-green {
+  background: #e8f5e9;
+  border-color: #388e3c;
+  color: #1b5e20;
+}
+
+.card-blue .bio-box {
+  border-color: #1976d2;
+}
+
+.card-green .bio-box {
+  border-color: #388e3c;
+}
+
+/* ---------- Floating + button ---------- */
+.add-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 200;
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: 50%;
+  background: #388e3c;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}

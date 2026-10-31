@@ -1,38 +1,106 @@
-/* Include padding and border inside the width and height */
-* {
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background: #f2f2f2;
   margin: 0;
-  padding: 20px;
+  min-height: 150vh;
 }
 
-h1 {
-  text-align: center;
-}
-
-.box {
-  width: 300px;
-  background-color: #ffffff;
-}
-
-.box-one {
-  padding: 20px;
-  border: 5px solid #3498db;
-  margin: 20px;
-}
-
-.box-two {
+/* ---------- Layout ---------- */
+.cards {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
   padding: 40px;
-  border: 10px solid #e74c3c;
-  margin: 40px;
 }
 
-.box-three {
-  padding: 0;
-  border: 2px solid #2ecc71;
-  margin: 10px;
+/* ---------- Top bar ---------- */
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #1976d2;
+  color: #fff;
+  padding: 14px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ---------- Profile card ---------- */
+.profile-card {
+  width: 260px;
+  padding: 20px;
+  text-align: center;
+  border: 3px solid;
+  border-radius: 16px;
+}
+
+.name {
+  margin: 12px 0 4px;
+}
+
+.role {
+  margin: 0;
+}
+
+/* ---------- Bio box ---------- */
+.bio-box {
+  height: 100px;
+  overflow: auto;
+  margin-top: 14px;
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+  border: 2px solid;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.bio-box p {
+  margin: 0;
+}
+
+/* ---------- Colour versions ---------- */
+.card-blue {
+  background: #e3f2fd;
+  border-color: #1976d2;
+  color: #0d47a1;
+}
+
+.card-green {
+  background: #e8f5e9;
+  border-color: #388e3c;
+  color: #1b5e20;
+}
+
+.card-blue .bio-box {
+  border-color: #1976d2;
+}
+
+.card-green .bio-box {
+  border-color: #388e3c;
+}
+
+/* ---------- Floating + button ---------- */
+.add-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 200;
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: 50%;
+  background: #388e3c;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
