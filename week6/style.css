@@ -1,0 +1,38 @@
+/* Include padding and border inside the width and height */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.box {
+  width: 300px;
+  background-color: #ffffff;
+}
+
+.box-one {
+  padding: 20px;
+  border: 5px solid #3498db;
+  margin: 20px;
+}
+
+.box-two {
+  padding: 40px;
+  border: 10px solid #e74c3c;
+  margin: 40px;
+}
+
+.box-three {
+  padding: 0;
+  border: 2px solid #2ecc71;
+  margin: 10px;
+}
